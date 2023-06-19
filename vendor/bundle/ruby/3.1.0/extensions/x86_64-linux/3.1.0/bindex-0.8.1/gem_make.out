@@ -1,0 +1,15 @@
+current directory: /home/svirin/blog/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+/home/svirin/.rvm/rubies/ruby-3.1.3/bin/ruby -I /home/svirin/.rvm/rubies/ruby-3.1.3/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /home/svirin/blog/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20230619-2518-qbinsv sitelibdir\=./.gem.20230619-2518-qbinsv clean
+
+current directory: /home/svirin/blog/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20230619-2518-qbinsv sitelibdir\=./.gem.20230619-2518-qbinsv
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/svirin/blog/vendor/bundle/ruby/3.1.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20230619-2518-qbinsv sitelibdir\=./.gem.20230619-2518-qbinsv install
+/usr/bin/install -m 0755 cruby.so ./.gem.20230619-2518-qbinsv/skiptrace/internal
