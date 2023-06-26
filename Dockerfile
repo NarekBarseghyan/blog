@@ -2,7 +2,11 @@ FROM ruby:3.1.3
 
 RUN apt-get update 
 
-COPY Gemfile* ./
+WORKDIR /app
+
+RUN gem install mysql2
+
+COPY Gemfile* .
 
 RUN bundle install
 
