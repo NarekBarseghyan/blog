@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  rails:
+    build: ./blog
+    command: rails server -b 0.0.0.0
+    container_name: app
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: http://db:3306
+    networks:
+      - myNet
+    depends_on:
+      - phpmyadmin
+
+  db:
+    image: mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: Svirin1234!
+    container_name: db
+    networks:
+      - myNet
+  
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    container_name: db-adminer
+    ports:
+      - 8080:80
+    networks:
+      - myNet
+    depends_on:
+      - db
+networks:
+  myNet:
+    name: myNet
+    driver: bridge
