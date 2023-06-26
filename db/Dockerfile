@@ -1,6 +1,6 @@
 FROM mysql
 
-WORKDIR /usr/src/app/blog/db
+WORKDIR /usr/src/app/data
 
 COPY . .
 
