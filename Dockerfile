@@ -1,5 +1,7 @@
 FROM ruby:3.1.3
 
+WORKDIR /usr/src/app
+
 RUN apt-get update 
 
 WORKDIR /app
@@ -11,5 +13,3 @@ COPY Gemfile* .
 RUN bundle install
 
 COPY . .
-
-EXPOSE 3000
