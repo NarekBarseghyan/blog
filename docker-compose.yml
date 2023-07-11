@@ -2,16 +2,16 @@ version: '3.8'
 
 services:
   rails:
-    build: ./blog
+    build: .
     command: rails server -b 0.0.0.0
     ports:
       - "3000:3000"
     environment:
-      DB_HOST: fdb
+      DB_HOST: db
       DB_USER: root
       DB_PASSWORD: Svirin1234!
     volumes:
-      - ROR_volume:/app
+      - .:/app
     depends_on:
       - phpmyadmin
 
