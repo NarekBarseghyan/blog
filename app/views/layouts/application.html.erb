@@ -13,6 +13,9 @@
   <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <%=  link_to 'Все статьи', posts_path %>
+  <%=  link_to 'Новая статья', new_post_path %>
     <%= yield %>
+
   </body>
 </html>
